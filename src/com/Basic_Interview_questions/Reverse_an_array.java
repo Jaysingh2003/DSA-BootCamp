@@ -3,7 +3,7 @@ package com.Basic_Interview_questions;
 import java.util.Arrays;
 
 public class Reverse_an_array {
-
+///
     public static int[] reverse(int[] arr) {
         if (arr == null || arr.length <= 1) {
             return arr;
@@ -31,9 +31,10 @@ public class Reverse_an_array {
 
     /// recusive
     public static void reverseRecursive(int[] arr, int start, int end) {
-        if (start >= end) {
+        if (arr == null || start >= end) {
             return;
         }
+
         int temp = arr[start];
         arr[start] = arr[end];
         arr[end] = temp;
