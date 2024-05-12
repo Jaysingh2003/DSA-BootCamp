@@ -17,7 +17,9 @@ public class Rotate_by_k_place {
 
     public void rotate(int[] nums, int k) {
         int n = nums.length;
-        k = k % n; // avoids repeated full rotations
+        if (n == 0) return;
+        k = k % n; // avoids repeated full rotations means if k is greater than n, we only need to rotate k % n times
+        /// if nums lenght 6 and k is 8, we only need to rotate 2 times because after 6 rotations, the array will be back to its original position
 
         reverse(nums, 0, n - 1);
         reverse(nums, 0, k - 1);
