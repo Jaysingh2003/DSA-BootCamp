@@ -29,7 +29,16 @@ public class Cycle_in_Linkedlist {
 
 
     public static void main(String[] args) {
+            ListNode head = new ListNode();
+            head.val = 1;
+            ListNode second = new ListNode();
+            second.val = 2;
+            head.next = second;
+            second.next = head; // creates a cycle
 
+            Cycle_in_Linkedlist cycleChecker = new Cycle_in_Linkedlist();
+            boolean hasCycle = cycleChecker.hasCycle(head);
+            System.out.println("Does the linked list have a cycle? " + hasCycle); // Expected output: true
     }
 }
 

@@ -1,5 +1,6 @@
 package com.LinkedList;
 
+/// in doubly linked list each node has two references one for next node and other for previous node
 public class DLL {
     private Node head;
 
