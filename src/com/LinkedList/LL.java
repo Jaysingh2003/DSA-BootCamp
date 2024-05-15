@@ -1,5 +1,6 @@
 package com.LinkedList;
 
+/// in singly linked list last node points to null
 public class LL {
 
     private Node head;
@@ -48,8 +49,12 @@ public class LL {
         for (int i = 1; i < index; i++) {
             temp = temp.next;
         }
-        Node node = new Node(val, temp.next);//next is the next of the temp node temp.next is position
-        //temp.next me temp ki next ki value aa jayegi
+        Node node = new Node(val, temp.next);///node point to the next node of temp means index wali node ko()
+        //Node node = new Node(25, temp.next);
+        //node.val = 25
+        //node.next = 30
+        //25 → 30 but But still not connected to list.
+       // that is why we perform the bellow step to connect the node to the list
         temp.next = node;//
         size++;
     }
