@@ -1,5 +1,7 @@
 package com.LinkedList;
 
+
+/// https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 public class Remove_duplicate {
     static class ListNode {
         int val;
@@ -46,15 +48,7 @@ public class Remove_duplicate {
 
     public static void main(String[] args) {
         // Create list: 1 -> 1 -> 2 -> 3 -> 3
-        ListNode head = new ListNode(
-                1, new ListNode(
-                1, new ListNode(
-                2, new ListNode(
-                3, new ListNode(3)
-        )
-        )
-        )
-        );
+        ListNode head = new ListNode(1, new ListNode(1, new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(3))))));
 
         Remove_duplicate rd = new Remove_duplicate();
         ListNode result = rd.deleteDuplicates(head);
