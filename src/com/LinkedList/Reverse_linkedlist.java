@@ -23,39 +23,50 @@ public class Reverse_linkedlist {
     private Node node;
 
     /// Q-1 Reverse a linkedlist using the     -=----->recursion
+    ///
+    /// this is the for  recusion and the time complexity is O(n) and space complexity is O(n) because of the recursive stack space.
+    /// static class Node {
+    ///         int val;
+    ///         Node next;
+    ///
+    ///         Node(int val) {
+    ///             this.val = val;
+    ///             this.next = null;
+    ///         }
+    ///     }
 
-    private void reverse(Node head) {
-        if (node == tail) {//base case w
-            head = tail;
-            return;
+    public Node reverse(Node head) {
+
+        // Base Case
+        if (head == null || head.next == null) {
+            return head;
         }
-        reverse(node.next);//make a recursive call till the end
-        //when the base case it then it  will come out of the stack
-        tail.next = node;
-        tail = node;
-        tail.next = null;
 
+        Node newHead = reverse(head.next);// Recursive call to reverse the rest of the list( But in the last call the ->head.next is null
+         //but we  do not exetcte the line head.next.next = head; because of the base case is alredy  return the head .
+
+
+        head.next.next = head;  // Reverse the link
+        head.next = null;       // Break old connection
+
+        return newHead;
     }
 
-    /// Q-2In place reverse-------------Inplace revese
+    /// Q-2In place reverse-------------Inplace revese complexity is O(n) and space complexity is O(1) because we are not using any extra space for the recursive stack.
 
-    public void reverseInplace() {
-        if (size < 2) {
-            return;
-        }
+    public Node reverse1(Node head) {
+
         Node prev = null;
-        Node present = head;
-        Node next = present.next;
-        while (present != null) {
-            present.next = prev;
-            prev = present;
-            present = next;
-            if (next != null) {//to avoid null pointer exception
-                next = next.next;
-            }
-        }
-        head = prev;//previus par hi head lie karega
+        Node current = head;
 
+        while (current != null) {
+            Node next = current.next;  // store next
+            current.next = prev;       // reverse link
+            prev = current;            // move prev
+            current = next;            // move current
+        }
+
+        return prev;  // new head
     }
 
     // https://leetcode.com/problems/reverse-linked-list/submissions/
