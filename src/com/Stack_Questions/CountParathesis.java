@@ -6,7 +6,7 @@ import java.util.Stack;
 public class CountParathesis {
     Stack<Character> stack = new Stack<>();
 
-    public int countUnmatchedParentheses(String s) {
+    public int count_Unmatched_Parentheses(String s) {
         Stack<Character> stack = new Stack<>();
         for (char c : s.toCharArray()) {
             if(c==')'){
@@ -29,7 +29,7 @@ public class CountParathesis {
     public static void main(String[] args) {
         CountParathesis cp = new CountParathesis();
         String s = "((())";
-        System.out.println(cp.countUnmatchedParentheses(s));
+        System.out.println(cp.count_Unmatched_Parentheses(s));
     }
 
 
