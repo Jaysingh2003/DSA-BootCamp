@@ -10,7 +10,7 @@ public class ValidParthesis {
         for (char c : s.toCharArray()) {
             if (c == '(' || c == '{' || c == '[') {
                 stack.push(c);
-            } else if (c == ')' || c == '}' || c == ']') {//it help to ignore other characters also
+            } else if (c == ')' || c == '}' || c == ']') {//it help to ignore other characters also beacouse we consithe only three bracekets
                 if (stack.isEmpty()) return false;
                 char top = stack.pop();
                 if ((c == ')' && top != '(') ||
@@ -21,7 +21,7 @@ public class ValidParthesis {
             }
             // ignore other characters
         }
-        return stack.isEmpty();
+        return stack.isEmpty();///its a final check if stack is empty or not if yes then retun true otherwiuse false
     }
 
     public static void main(String[] args) {
