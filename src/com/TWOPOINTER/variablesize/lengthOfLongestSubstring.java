@@ -10,11 +10,12 @@ public class lengthOfLongestSubstring {
 
         for (int right = 0; right < s.length(); right++) {
             char ch = s.charAt(right);
-
+           /// if char is already present in the map then move the left pointer to the next of the index of the character
+        ///  and start counting from that position if badi position ho to
             if (map.containsKey(ch)) {
                 left = Math.max(left, map.get(ch) + 1);
             }
-
+           /// if character map me  already present na ho to.
             map.put(ch, right);
             maxLen = Math.max(maxLen, right - left + 1);//we comapere with th window size nopt the k like in previous problems
         }
