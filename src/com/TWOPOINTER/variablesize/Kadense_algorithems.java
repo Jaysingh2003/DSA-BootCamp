@@ -2,7 +2,8 @@ package com.TWOPOINTER.variablesize;
 
 
 //vvi
-//If a subarray sum becomes negative, it is better to discard it, because it cannot contribute to a maximum sum in the future.
+/// Kadane's algorithm is an efficient way to find the maximum sum of a contiguous subarray in an array of integers. The algorithm works by iterating through the array and keeping track of the current sum of the subarray being considered. If the current sum exceeds the maximum sum found so far, it updates the maximum sum.
+///  If the current sum becomes negative, it resets it to zero, as a negative sum would not contribute to a maximum sum in the future.
 public class    Kadense_algorithems {
     public static int maxsum(int[] arr){
         int max=Integer.MIN_VALUE;
@@ -12,7 +13,7 @@ public class    Kadense_algorithems {
             if(currentsum>max){
                 max=currentsum;
             }
-            if(currentsum<0) {
+            if(currentsum<0) {// if the current sum becomes negative, reset it to zero
                 currentsum = 0;
             }
         }
