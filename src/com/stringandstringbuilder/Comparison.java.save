@@ -5,7 +5,8 @@ public class Comparison {
         String a="jay";
         String b="jay";
 
-
+        // '==' compares reference identity (whether a and b point to the same object)
+        // For string literals Java interns them, so both a and b point to the same interned object here.
         System.out.println(a==b);//it will give the ture value
 
         // equals() compares the contents (characters) of the strings
@@ -53,3 +54,10 @@ public class Comparison {
     */
 
 }
+// practice update 
+git add .
+GIT_AUTHOR_DATE="2024-05-31T10:00:00" GIT_COMMITTER_DATE="2024-05-31T10:00:00" git commit -m "Practice update - May 31"
+
+
+
+
