@@ -1,5 +1,5 @@
 package com.backtarking;
-
+/// This program will print all the possible numbers of 0 and 1 of length n
 public class PossibleNumbers {
 
     static void backtracking(int n ,String str){
