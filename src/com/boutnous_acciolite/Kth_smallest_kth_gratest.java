@@ -1,5 +1,8 @@
 package com.boutnous_acciolite;
 
+
+/// it will work only for BST because in BST the left subtree is smaller
+/// than the root and right subtree is greater than the root
 public class Kth_smallest_kth_gratest {
     class Node {
         int value;
