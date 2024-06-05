@@ -3,7 +3,8 @@ package com.boutnous_acciolite;
 import java.util.LinkedList;
 import java.util.Queue;
 
-
+//Note  in queue when we add the element is added at the end and removalis from the front
+//in stack when we add the element is added at the top and removalis from the top
 /// ther are three step
 /// copy the elements from q1 to q2
 /// add the new element to q1
