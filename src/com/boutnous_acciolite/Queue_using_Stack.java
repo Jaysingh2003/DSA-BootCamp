@@ -2,6 +2,10 @@ package com.boutnous_acciolite;
 
 import java.util.Stack;
 
+
+
+//Note  in queue when we add the element is added at the end and removalis from the front
+//in stack when we add the element is added at the top and removalis from the top
 public class Queue_using_Stack {
 
     Stack<Integer> s1 = new Stack<>();
