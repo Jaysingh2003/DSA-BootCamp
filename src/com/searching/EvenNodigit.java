@@ -1,5 +1,5 @@
 package com.searching;
-
+/// find the no of digit in the array which contain even no of digit
 public class EvenNodigit {
     public static void main(String[] args) {
         int[] arr={153,294958,32,4567,457,7544};
