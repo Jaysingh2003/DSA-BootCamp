@@ -1,5 +1,6 @@
 package com.searching.binerysearch;
 
+/// oreder agnostic means it can work for both ascending and descending order array
 public class OrderAgnosticBinersearch {
     public static void main(String[] args) {
         //int[] arr = {18,-10,0,2,5,7,9,24,45,67,89,100};
