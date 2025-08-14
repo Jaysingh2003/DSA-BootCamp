@@ -1,0 +1,21 @@
+package com.recursion;
+
+public class FibonaciNumber {
+    public static void main(String[] args) {
+        System.out.println(fib(6)); // Output: 8
+    }
+
+    public static int fib(int n) {
+        if (n < 2) {// Because we already know that we aktBase case: fib(0) = 0, fib(1) = 1
+            return n;
+        }
+        return fib(n - 1) + fib(n - 2);
+    }
+}
+// it is the sum of previous two no
+//fibonacchi(0) = 0
+//fibonacchi(1) = 1
+//fibonacchi(2) = 1
+//fibonacchi(3) = 2
+//fibonacchi(4) = 3
+//fibonacchi(5) = 5 etc.
