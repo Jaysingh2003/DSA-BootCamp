@@ -7,8 +7,15 @@ import java.util.Arrays;
 public class ReverseString {
     public static void main(String[] args) {
       char[] arr = {'h','e','l','l','o'};
+        char[] arr1 = {'h','e','l','l','o'};
         reverse(arr);
         System.out.println(Arrays.toString(arr));
+
+        Solution s= new Solution();
+        s.reverseString(arr1);
+        System.out.println(Arrays.toString(arr1));
+
+
 
 
     }
@@ -25,9 +32,9 @@ public class ReverseString {
         reversehelper(s, left + 1, right - 1);
     }
 }
-/*(In-place Reverse)
+//(In-place Reverse)
 class Solution {
-    public void reverseString(char[] s) {
+   static public void reverseString(char[] s) {
         int left = 0;
         int right = s.length - 1;
 

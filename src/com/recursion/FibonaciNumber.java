@@ -4,7 +4,7 @@ public class FibonaciNumber {
     public static void main(String[] args) {
         System.out.println(fib(6)); // Output: 8
     }
-
+//
     public static int fib(int n) {
         if (n < 2) {// Because we already know that we aktBase case: fib(0) = 0, fib(1) = 1
             return n;
@@ -19,3 +19,6 @@ public class FibonaciNumber {
 //fibonacchi(3) = 2
 //fibonacchi(4) = 3
 //fibonacchi(5) = 5 etc.
+
+// Time complexity: O(2^n) - Exponential time complexity due to the recursive calls
+//and if we have to print 50 fibonacci numbers then it will take a lot of time
