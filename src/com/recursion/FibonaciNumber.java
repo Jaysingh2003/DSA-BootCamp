@@ -2,9 +2,19 @@ package com.recursion;
 
 public class FibonaciNumber {
     public static void main(String[] args) {
-        System.out.println(fib(6)); // Output: 8
+            System.out.println(fib(6)); // Output: 8
+
+            System.out.println(fiboNachiformula(60));
+
     }
-//
+
+    // Using Binet's formula to calculate Fibonacci numbers
+    static  int  fiboNachiformula(int n){
+       return (int)(Math.pow(((1 + Math.sqrt(5)) / 2),n)  / (Math.sqrt(5)));
+
+    }
+
+    // Recursive function to calculate Fibonacci numbers
     public static int fib(int n) {
         if (n < 2) {// Because we already know that we aktBase case: fib(0) = 0, fib(1) = 1
             return n;
