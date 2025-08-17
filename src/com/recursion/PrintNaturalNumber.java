@@ -8,7 +8,8 @@ public class PrintNaturalNumber {
         if (n > 10) {
             return; // Base case: stop when n exceeds 10
         }
-        System.out.println(n); // Print the current number
+        System.out.println(n); // Print the current number in ascending oredre
         print(n + 1); // Recursive call with the next number
+        //System.out.println(n); //Print the current numberin descendiong order
     }
 }
