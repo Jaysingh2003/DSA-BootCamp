@@ -2,7 +2,7 @@ package com.recursion;
 
 public class FibonaciNumber {
     public static void main(String[] args) {
-            System.out.println(fib(6)); // Output: 8
+           // System.out.println(fib(50)); // Output: 8
 
             System.out.println(fiboNachiformula(60));
 
