@@ -13,7 +13,8 @@ public class powerOfAandb {
        power = power >> 1;
         base = base * base;
       }
-        result = result * base;
+
+        System.out.println(result);
 
     }
     }
