@@ -8,7 +8,7 @@ we can do it via the orr opertaor
 public class IthBitSet {
     public static void main(String[] args) {
         int n = 5; // binary: 0101
-        int i = 1; // we want to set the 1st bit
+        int i = 2; // we want to set the 1st bit
 
         int result = setIthBit(n, i);
         int newResult = resetIthBit(n, i);
