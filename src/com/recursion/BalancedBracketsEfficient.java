@@ -2,17 +2,17 @@ package com.recursion;
 
 public class BalancedBracketsEfficient {
     public static void main(String[] args) {
-        String s1 = "{[()]}";     // true
-        String s2 = "([{}])";     // true
-        String s3 = "({[)]}";     // false
-        String s4 = "((()))";     // true
-        String s5 = "{[(()])}";   // false
+        String s1 = "{[(])}";     // true
+//        String s2 = "([{}])";     // true
+//        String s3 = "({[)]}";     // false
+//        String s4 = "((()))";     // true
+//        String s5 = "{[(()])}";   // false
 
         System.out.println(isBalanced(s1)); // true
-        System.out.println(isBalanced(s2)); // true
-        System.out.println(isBalanced(s3)); // false
-        System.out.println(isBalanced(s4)); // true
-        System.out.println(isBalanced(s5)); // false
+//        System.out.println(isBalanced(s2)); // true
+//        System.out.println(isBalanced(s3)); // false
+//        System.out.println(isBalanced(s4)); // true
+//        System.out.println(isBalanced(s5)); // false
     }
 
     // Main function
@@ -28,7 +28,7 @@ public class BalancedBracketsEfficient {
             if (ch == '(' || ch == '{' || ch == '[') {
                 // Find the matching closing bracket recursively
                 int next = check(s, i + 1, n);
-                if (next == -1 || next >= n) return -1;
+                if (next == -1 || next >= n) return -1;// no match found or out of bounds
 
                 char close = s.charAt(next);
                 if (!matches(ch, close)) return -1;

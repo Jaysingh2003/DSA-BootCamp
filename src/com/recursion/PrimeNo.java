@@ -13,7 +13,7 @@ public class PrimeNo {
         if(n==2){
             return true;
         }
-        if(n%i==0){
+        if(n % i == 0){
             return false;
         }
         if(i*i>n) {
