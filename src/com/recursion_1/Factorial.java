@@ -10,6 +10,10 @@ public class Factorial {
         }
         return n * factorial(n - 1); // Recursive case
     }
+
+
+    //2nd program
+
     static int sumofnos(int n) {
         if (n == 1) {
             return 1; // Base case: sum of first 1 number is 1
