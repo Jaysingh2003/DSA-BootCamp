@@ -11,6 +11,7 @@ public class Search_target_element {
         System.out.println(searchLastIndex(arr, target, arr.length - 1));
         searchAllIndex(arr, target, 0);
         System.out.println(list);
+        System.out.println(searchAllIndex2(arr, target, 0, new ArrayList<>()));
     }
 
     // Questions-1 if the target element is present or not
@@ -57,5 +58,19 @@ public class Search_target_element {
         }
         searchAllIndex(arr, target, index + 1);
     }
+    // Questions-5 find all the index of target element
+    // Approach-1 using parameterized arraylist and its an better approach because its not use the static variable
+
+    static ArrayList searchAllIndex2(int[] arr, int target, int index, ArrayList<Integer> list) {
+        if (index == arr.length) {
+            return list;
+        }
+        if (arr[index] == target) {
+            list.add(index);
+        }
+        return searchAllIndex2(arr, target, index + 1, list);
+    }
 
 }
+//Note:-  Variables passed as parameters to a function are unique to each function call (each recursive call gets its own copy or reference).
+// and things that you will add in body it will be available for that fxn calls

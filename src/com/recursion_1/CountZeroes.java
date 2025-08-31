@@ -25,7 +25,7 @@ public class CountZeroes {
         return helper(n, 0);
     }
     static int helper(int n, int count){
-       if(n == 0){
+       if(n == 0){//if no ki last didgit bhi end ho jaye to count return kar do
            return count;
        }
        int lastDigit = n % 10;

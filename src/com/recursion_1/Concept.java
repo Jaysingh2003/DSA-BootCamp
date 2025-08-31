@@ -12,7 +12,7 @@ public class Concept {
         System.out.println(n);
         printsesc(--n);//this will decrement n first and then pass it to the function
 //        printsesc(n--);//this will pass the current value of n to the function and then decrement it
-//                         //but it will not affect the current function call be because it call tghe function again before it value descresing
+//                         //but it will not affect the current function call be because it call the function again before it value descresing
 //        System.out.println(n);
 
     }
