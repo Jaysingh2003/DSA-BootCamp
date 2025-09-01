@@ -14,7 +14,7 @@ public class BubbleSort {
     }
 
     static void bubblesort(int[] arr, int l, int r) {//l is for number of passes and r is for comparison in each pass
-        if (l == 0) {
+        if (l == 0) {                               //l is like the row and r is like the column think like 2d array
             return;
         }
         if (l > r) {

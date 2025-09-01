@@ -18,7 +18,7 @@ public class SelectionSort {
         if (r == 0) {
             return;
         }
-        if (c < r) {//note this will fail when c is equal to r means the lastr element then we simplyy swap it with the max element
+        if (c < r) {//note this will fail when c is equal to r means the last element then we simply swap it with the max element
             if (arr[c] > arr[max]) { //max is the index of the largest element att everyb pass we asssume the
                 //first element is the largest and then we compare it with the rest of the elements
 
