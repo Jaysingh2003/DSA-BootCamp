@@ -4,8 +4,9 @@ public class Stream_remove_the_character {
     public static void main(String[] args) {
         skip("", "baccad");
         System.out.println();
-
         System.out.println(skip2("baccahjyd"));
+        System.out.println(skipWord("baccappleahjydapple"));
+        System.out.println(skipAppnotApple("baccappleahjydapp"));
     }
 
     static void skip(String p, String up) {//proccssed and unprocessed string
@@ -32,6 +33,31 @@ public class Stream_remove_the_character {
             return skip2(s.substring(1));
         } else {
             return currChar + skip2(s.substring(1));
+        }
+    }
+
+    //if we wan to skip the word "apple"
+    static String skipWord(String s) {
+        if (s.isEmpty()) {
+            return "";
+        }
+        if (s.startsWith("apple")) {
+            return skipWord(s.substring(5));
+        } else {
+            return s.charAt(0) + skipWord(s.substring(1));
+        }
+
+    }
+
+    //if we want to skip the word "app" and "apple"
+    static String skipAppnotApple(String s) {
+        if (s.isEmpty()) {
+            return "";
+        }
+        if (s.startsWith("app") && !s.startsWith("apple")) {
+            return skipAppnotApple(s.substring(3));
+        } else {
+            return s.charAt(0) + skipAppnotApple(s.substring(1));
         }
     }
 }
