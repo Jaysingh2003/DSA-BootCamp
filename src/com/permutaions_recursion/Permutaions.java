@@ -19,7 +19,7 @@ public class Permutaions {
         }
         char ch = up.charAt(0);
         for (int i = 0; i <= p.length(); i++) {// i<=p.length() because the the index of string is from 0 and
-            //and the process string alson starts from 0 so we have to include the last index also
+            //and the process string also starts from 0 so we have to include the last index also
             String f = p.substring(0, i);
             String s = p.substring(i, p.length());
             permutaion(f + ch + s, up.substring(1));//
