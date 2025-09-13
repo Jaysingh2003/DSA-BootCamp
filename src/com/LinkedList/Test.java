@@ -1,25 +1,27 @@
 package com.LinkedList;
 
-public class LL {
 
+import org.w3c.dom.Node;
+
+public class Test {
     private Node head;
     private Node tail;
     private int size;
 
-    public LL() {//constructor
+    public Test() {//
         this.size = 0;
     }
 
-    //insert at very first position
     public void insertFirst(int val) {
-        Node node = new Node(val);
-        node.next = head;//
-        head = node;
 
+        Node node = new Node(val);
+        node.next = head;
+        head = node;
         if (tail == null) {
             tail = head;
         }
         size += 1;
+
     }
 
     //insert at last position
@@ -32,9 +34,10 @@ public class LL {
         tail.next = node;
         tail = node;
         size++;
+
     }
 
-    //insert at an index
+    //inset at any position
     public void insertAt(int val, int index) {
         if (index == 0) {
             insertFirst(val);
@@ -44,23 +47,23 @@ public class LL {
             insertLast(val);
             return;
         }
+
         Node temp = head;
         for (int i = 1; i < index; i++) {
             temp = temp.next;
         }
-        Node node = new Node(val, temp.next);//next is the next of the temp node temp.next is position
-        //temp.next me temp ki next ki value aa jayegi
-        temp.next = node;//
+        Node node = new Node(val, temp.next);//naye node ka reference temp.next pe point karega
+        temp.next = node;
         size++;
+
     }
 
-    //Delete
-    //delete from the firstposition
+    //delete from first position
     public int deleteFirst() {
         if (head == null) {
-            throw new RuntimeException("Cannot delete from an empty list");
+            System.out.println("List is empty");
+            return -1;
         }
-
         int val = head.data;
         head = head.next;
         if (head == null) {
@@ -70,8 +73,12 @@ public class LL {
         return val;
     }
 
-    //delete from the last position
+    //delete from last position
     public int deleteLast() {
+        if (tail == null) {
+            System.out.println("List is empty");
+            return -1;
+        }
         if (size <= 1) {
             return deleteFirst();
         }
@@ -81,9 +88,9 @@ public class LL {
         tail.next = null;
         size--;
         return val;
-    }
 
-    //delete from a particular index
+    }
+    //delete from any position
     public int deleteAt(int index) {
         if (index == 0) {
             return deleteFirst();
@@ -92,15 +99,13 @@ public class LL {
             return deleteLast();
         }
         Node prev = get(index - 1);
-        int val = prev.next.data;//value of the node which is to be deleted for the return
+        int val = prev.next.data;
         prev.next = prev.next.next;
         size--;
         return val;
     }
 
-
-    //Node type ka return fuction karega
-    public Node get(int index) {//get the node at a particular index
+    public Node get(int index) {
         Node temp = head;
         for (int i = 0; i < index; i++) {
             temp = temp.next;
@@ -108,24 +113,13 @@ public class LL {
         return temp;
     }
 
-
-    //us ethe temp node to traverse the linked list do not interfare then original structures
-    public void display() {
-        Node temp = head;
-        while (temp != null) {
-            System.out.print(temp.data + " -> ");
-            temp = temp.next;
-        }
-        System.out.println("END");
-    }
-
-    private class Node {
+    public class Node {
         private int data;
         private Node next;
 
         public Node(int data) {
             this.data = data;
-            //by default if bed did not provide the the next it will be taken as null this.next=null;
+            this.next = null;
         }
 
         public Node(int data, Node next) {
