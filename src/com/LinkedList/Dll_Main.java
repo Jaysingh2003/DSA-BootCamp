@@ -9,6 +9,7 @@ public class Dll_Main {
         dll.insertFirst(15);
         dll.insertFirst(19);
         dll.insertLast(100);
+        dll.inserAfter(10, 50);
         dll.display();
     }
 }
