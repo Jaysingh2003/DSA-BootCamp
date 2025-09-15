@@ -108,6 +108,17 @@ public class LL {
         return temp;
     }
 
+    public Node find(int value) {
+        Node node = head;
+        while (node != null) {
+            if (node.data == value) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
 
     //us ethe temp node to traverse the linked list do not interfare then original structures
     public void display() {
@@ -119,8 +130,9 @@ public class LL {
         System.out.println("END");
     }
 
-    private class Node {
-        private int data;
+   public class Node {
+
+         int data;
         private Node next;
 
         public Node(int data) {
