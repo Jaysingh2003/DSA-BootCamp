@@ -44,6 +44,34 @@ public class DLL {
             node.next.prev = node;
         }
     }
+    //detete first node
+    public void deleteFirst(){
+        if(head==null){
+            System.out.println("list is empty");
+            return;
+        }
+        head = head.next;
+        if(head != null) {// if there is more than one node
+            head.prev = null;
+        }
+
+    }
+    //delete a node by value
+    public void delete(int value){
+        Node node = find(value);
+        if(node==null){
+            System.out.println("does not exist");
+            return;
+        }
+        if(node.prev != null) {// if node is not the first node
+            node.prev.next = node.next;
+        }else{//if node is the first node
+            head = node.next;
+        }
+        if(node.next != null) {// if node is not the last node
+            node.next.prev = node.prev;
+        }
+    }
 
     public Node find(int value) {
         Node node = head;
@@ -72,7 +100,7 @@ public class DLL {
         }
         System.out.println("START");
     }
-    //
+
 
 
     private class Node {

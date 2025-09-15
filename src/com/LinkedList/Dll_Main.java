@@ -11,5 +11,7 @@ public class Dll_Main {
         dll.insertLast(100);
         dll.inserAfter(10, 50);
         dll.display();
-    }
+//        dll.deleteFirst();
+//        dll.display();
+  }
 }
