@@ -53,6 +53,21 @@ public class LL {
         temp.next = node;//
         size++;
     }
+    //insert using the recursion
+
+    public void insertRecursive(int val, int index) {
+        head = insert(val, index, head);//head is the current node
+
+    }
+    private Node insert(int val, int index, Node node) {
+        if (index == 0) {
+            Node temp = new Node(val, node);//new node point to the current node means zero index wali node ko
+            size++;
+            return temp;
+        }
+        node.next = insert(val, index - 1, node.next);//node.next is the next node of the current node
+        return node;// return current node unchanged
+    }
 
     //Delete
     //delete from the firstposition
@@ -130,9 +145,9 @@ public class LL {
         System.out.println("END");
     }
 
-   public class Node {
+    public class Node {
 
-         int data;
+        int data;
         private Node next;
 
         public Node(int data) {

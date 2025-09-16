@@ -9,5 +9,7 @@ public class Cll_Main {
         cll.insert(4);
         cll.insert(5);
         cll.display();
+        cll.delete(3);
+        cll.display();
     }
 }

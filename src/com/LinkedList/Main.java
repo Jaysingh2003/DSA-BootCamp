@@ -14,6 +14,8 @@ public class Main {
         list.display();
         list.deleteLast();
         list.display();
+        list.insertRecursive(50,3);
+        list.display();
 
 
     }
