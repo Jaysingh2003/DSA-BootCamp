@@ -5,8 +5,8 @@ package com.LinkedList;
       int val;
      ListNode next;
       ListNode() {
-          val = x;
-        next = null;
+          val = 0;
+          next = null;
       }
   }
 

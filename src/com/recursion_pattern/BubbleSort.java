@@ -17,7 +17,8 @@ public class BubbleSort {
         if (l == 0) {                               //l is like the row and r is like the column think like 2d array
             return;
         }
-        if (l > r) {
+        if (l > r) {//l start from the n-1 so l jyada rahega every pass me kuki row sorted hota jayega and uski lenth
+                    //kam hot jayega
             if (arr[r] > arr[r + 1]) {
                 //swap
                 int temp = arr[r];
