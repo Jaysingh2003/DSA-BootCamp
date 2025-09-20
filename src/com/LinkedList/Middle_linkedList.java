@@ -1,35 +1,48 @@
 package com.LinkedList;
 
-//https://leetcode.com/problems/middle-of-the-linked-list/description/
 
-public class ListNode4 {
-    int val;
-    ListNode4 next;
-
-    ListNode4() {
-    }
-
-    ListNode4(int val) {
-        this.val = val;
-    }
-
-    ListNode4(int val, ListNode4 next) {
-        this.val = val;
-        this.next = next;
-    }
-
-
-    public class Middle_linkedList {
-        public ListNode4 middleNode(ListNode4 head) {
-            ListNode4 slow = head;
-            ListNode4 fast = head;
-
-            while (fast != null && fast.next != null) {
-                slow = slow.next;
-                fast = fast.next.next;
-            }
-
-            return slow;
+class Middle_linkedList {
+    public  ListNode sortList(ListNode head){
+        if(head == null || head.next == null){
+            return head;
         }
+        ListNode mid= middleNode(head);
+        ListNode left=sortList(head);
+        ListNode rigth= sortList(mid);
+        return merge(left,rigth);
     }
 
+    ListNode merge(ListNode first, ListNode second) {
+
+        ListNode dummyHead = new ListNode();
+        ListNode tail = dummyHead;
+
+        while (first != null && second != null) {
+            if (first.val < second.val) {
+                tail.next = first;
+                first = first.next;
+                tail = tail.next;
+            } else {
+                tail.next = second;
+                second = second.next;
+                tail = tail.next;
+            }
+        }
+        tail.next = (first != null) ? first : second;
+        return dummyHead.next;
+    }
+
+    public ListNode middleNode(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        ListNode prev = null;
+
+        while (fast != null && fast.next != null) {
+            prev = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+
+        }
+        return prev;
+    }
+}

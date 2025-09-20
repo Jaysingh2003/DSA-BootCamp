@@ -4,7 +4,7 @@ package com.LinkedList;
  class ListNode {
       int val;
      ListNode next;
-      ListNode(int x) {
+      ListNode() {
           val = x;
         next = null;
       }
