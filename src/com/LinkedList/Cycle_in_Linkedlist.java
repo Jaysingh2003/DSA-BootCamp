@@ -1,10 +1,10 @@
 package com.LinkedList;
 
 //https://leetcode.com/problems/linked-list-cycle/description/
- class ListNode {
+ class ListNode5 {
       int val;
      ListNode next;
-      ListNode() {
+      ListNode5() {
           val = 0;
           next = null;
       }
