@@ -1,6 +1,8 @@
 package com.LinkedList;
 
 
+import java.util.List;
+
 class ListNode {
     int val;
     ListNode next;
@@ -17,6 +19,7 @@ class ListNode {
         this.next = next;
     }
 
+    /// Q-1 Reorder the linkedlist
     //https://leetcode.com/problems/reorder-list/description/
     public class ReorderList {
         public void reorderList(ListNode head) {
@@ -70,4 +73,79 @@ class ListNode {
             return prev;
         }
     }
+
+
+    ///  Q-2 revese the linkedlist into k grups
+    //https://leetcode.com/problems/reverse-nodes-in-k-group/description/
+    public ListNode reverseKGroup(ListNode head, int k) {
+
+        if (head == null || k == 1) return head;
+
+        // Check if there are at least k nodes left
+        ListNode node = head;
+        for (int i = 0; i < k; i++) {
+            if (node == null) return head;
+            node = node.next;
+        }
+
+        // Reverse k nodes
+        ListNode prev = null, curr = head, next = null;
+        for (int i = 0; i < k; i++) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        // Recursively call for the next group
+        head.next = reverseKGroup(curr, k);
+        return prev;
+    }
+
+    /// Q-3 revesres the alternate grups of k elements
+    public ListNode reverseKGroup2(ListNode head, int k) {
+        if (head == null || k <= 1) {
+            return head;
+        }
+        //skip the first  left-1 left elment
+        ListNode prev = null;
+        ListNode current = head;
+
+        //when the there are more nodes left
+        while (current != null) {//last and newwnd will we used for the next  group  for the update opf privius and current
+            ListNode last = prev;//last points to the node before the current group.
+            ListNode newEnd = current; // newEnd marks the start of the group to be reversed will become the end after reversal).
+
+            //reverse between the left and right
+            ListNode next = current.next;
+            for (int i = 0; current != null && i < k; i++) {
+                current.next = prev;
+                prev = current;
+                current = next;
+                if (next != null) {
+                    next = next.next;
+                }
+            }
+            /// Connect the previous group (last) to the new head of the reversed group (prev)
+            /// if it's the first group, update head.
+            /// Connect the end of the reversed group (newEnd) to the next node (current)
+
+            if (last != null) {
+                last.next = prev;
+            } else {
+                head = prev;//if the next group is not present
+            }
+            newEnd.next = current;
+
+//          Skip the next k nodes (do not reverse them), updating prev and current.
+            for (int i = 0; current != null && i < k; i++) {
+                prev = current;
+                current = current.next;
+
+
+            }
+        }
+        return head;
+    }
 }
+
