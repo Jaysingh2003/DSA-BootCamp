@@ -147,5 +147,32 @@ class ListNode {
         }
         return head;
     }
+
+    /// Q-4
+    //https://leetcode.com/problems/rotate-list/description/
+    public ListNode rotateRight(ListNode head, int k) {
+        if (head == null || head.next == null || k <= 0) {
+            return head;
+        }
+        //for finding the lase node
+        ListNode last = head;
+        int length = 1;
+        while (last.next != null) {
+            last = last.next;
+            length++;
+        }
+        last.next = head;
+        int rotations = k % length;//no of rotations
+        int skip = length - rotations;//kitne length tak jana h
+        ListNode newlast = head;//head se last elemnt tak jana h
+        for (int i = 0; i < skip - 1; i++) {
+            newlast = newlast.next;
+        }
+        head = newlast.next;
+        newlast.next = null;
+        return head;
+
+
+    }
 }
 
