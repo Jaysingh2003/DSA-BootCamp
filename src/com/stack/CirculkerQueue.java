@@ -2,25 +2,29 @@ package com.stack;
 
 public class CirculkerQueue {
     protected int[] data;
-  private static final int DEFAULT_SIZE = 10;
-   protected  int front =0;
-    protected int end =0;
+    private static final int DEFAULT_SIZE = 10;
+    protected int front = 0;
+    protected int end = 0;
     private int size = 0;// Current size of the queue
 
 
-    public CirculkerQueue(){
+    public CirculkerQueue() {
         this(DEFAULT_SIZE);
     }
+
     public CirculkerQueue(int size) {
         this.data = new int[size];
 
     }
+
     public boolean isFull() {
         return size == data.length;
     }
-    public boolean isEmpty() {
+
+    public boolean isEmpty() {//taking size beacuse  of circular queue
         return size == 0;
     }
+
     public boolean add(int item) {
         if (isFull()) {
             System.out.println("Queue is full, cannot add " + item);
@@ -33,8 +37,8 @@ public class CirculkerQueue {
     }
 
     public int remove() {
-        if(isEmpty()) {
-       throw new IllegalStateException("Queue is empty, cannot remove");
+        if (isEmpty()) {
+            throw new IllegalStateException("Queue is empty, cannot remove");
         }
         int removedItem = data[front];
         data[front] = 0; // Optional: Clear the removed item
@@ -43,6 +47,7 @@ public class CirculkerQueue {
         return removedItem;
 
     }
+
     public int front() {
         if (isEmpty()) {
             throw new IllegalStateException("Queue is empty, cannot peek");
@@ -57,14 +62,14 @@ public class CirculkerQueue {
             return;
         }
         int i = front;
-        do{
+        do {
             System.out.print(data[i] + " ");
             i++;
-            i %= data.length; // Circular increment
+            i %= data.length; // if we reach the end of the array, start from the beginning
         } while (i != end);
         System.out.println();
 
-       }
-
     }
+
+}
 

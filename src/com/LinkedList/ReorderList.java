@@ -161,7 +161,9 @@ class ListNode {
             last = last.next;
             length++;
         }
+
         last.next = head;
+        //skip karne ka pl
         int rotations = k % length;//no of rotations
         int skip = length - rotations;//kitne length tak jana h
         ListNode newlast = head;//head se last elemnt tak jana h

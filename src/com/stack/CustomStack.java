@@ -27,7 +27,7 @@ public class CustomStack {
             return false;
         }
         top++;
-          stack[top] = x; // Increment top and add the element
+        stack[top] = x; // Increment top and add the element
         return true;
     }
 
@@ -49,7 +49,7 @@ public class CustomStack {
     }
 
     // Check if empty
-    public boolean isEmpty() {
+    public boolean isEmpty() {//i th valure of top is -1 then it is empty because we are incrmenting the top when we are pushing the element
         return top == -1;
     }
 
@@ -59,7 +59,7 @@ public class CustomStack {
     }
 
     // Size
-    public int size() {
+    public int size() { //indsex start with the 0 so we have to add 1
         return top + 1;
     }
 }
