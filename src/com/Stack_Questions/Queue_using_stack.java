@@ -1,6 +1,9 @@
 package com.Stack_Questions;
 
 import java.util.Stack;
+//https://leetcode.com/problems/implement-queue-using-stacks/submissions/1783882971/
+
+//This is the insert efficient approach.... insert operation is 0(1) time complexity
 
 public class Queue_using_stack {
 
@@ -26,7 +29,6 @@ public class Queue_using_stack {
         }
         return removed;
     }
-
     //peak is the first element that will be removed from the queue
     public int peek() {//the item that will removed from the queue first will e tyhe first element
         while(!first.isEmpty()){
@@ -42,4 +44,8 @@ public class Queue_using_stack {
     public boolean empty() {
         return first.isEmpty();
     }
+
+    //in interview can ask
+    //This is the remoce  efficient approach.... means 0(1) time complexity for remove operation
+     //refer the Queue_using_stack_remove_efficient approach file
 }
