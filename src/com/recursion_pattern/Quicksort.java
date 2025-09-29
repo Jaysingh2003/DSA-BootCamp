@@ -19,7 +19,7 @@ public class Quicksort {
         int pivot = arr[mid];
 
         //this is reason when the array is already sorted then it will not swap
-        while(s <= e){
+        while(s <= e){//start with the first element and the last element
             while(arr[s] < pivot){
                 s++;
             }
@@ -27,7 +27,7 @@ public class Quicksort {
                 e--;
             }
             //this condition will again use to check if the element is in the correct position or not
-            //because the contion of while loop will check agin only whn the entire code is executed and theremay be
+            //because the condition of while loop will check agin only whn the entire code is executed and theremay be
             //be possibility that the element is not in the correct position they will come on the same index
             if(s <= e){
                 int temp=arr[s];

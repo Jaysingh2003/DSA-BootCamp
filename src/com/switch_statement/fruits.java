@@ -15,7 +15,7 @@ public class fruits {
 //            case "apple" -> System.out.println("one apple  day");
 //
 //
-//        }
+//        }/
 
         int day = sc.nextInt();
         switch (day){
