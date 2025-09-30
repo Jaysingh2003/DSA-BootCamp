@@ -46,14 +46,14 @@ public class BineryTree {
     }
 
     // Display the tree
-    public void display() {
+    public void display() {///overloading
         display(root, "");
     }
 
     private void display(Node node, String indent) {
         if (node == null) return;
         System.out.println(indent + node.value);
-        display(node.left, indent + "\t");
+        display(node.left, indent + "\t");//here \t is tab character
         display(node.right, indent + "\t");
     }
 
@@ -61,7 +61,6 @@ public class BineryTree {
         Scanner scanner = new Scanner(System.in);
         BineryTree tree = new BineryTree();
         tree.populateTree(scanner);
-        System.out.println("Tree structure:");
         tree.display();
     }
 }
