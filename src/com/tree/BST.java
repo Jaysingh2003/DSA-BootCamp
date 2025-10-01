@@ -42,9 +42,20 @@ public class BST {
     public void populatedTree(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             this.insert(arr[i]);
-
         }
-
+    }
+    /// populate for the sorted array-> 1,2,3,4,5,6,..
+    public void populatedSortedTree(int[] arr) {
+        populatedTree(arr, 0, arr.length - 1);
+    }
+    private void populatedTree(int[] arr, int start, int end) {
+        if (start > end) {//it will stop becouse the end  value become -1 at a time  so no element is there to insert
+            return;
+        }
+        int mid = (start + end) / 2;
+        insert(arr[mid]);
+        populatedTree(arr, start, mid - 1);
+        populatedTree(arr, mid + 1, end);
     }
 
     /// insert fxn
@@ -82,7 +93,7 @@ public class BST {
     }
 
 
-    /// display the tree
+    /// for the display of the tree
     public void display() {
         display(this.root, "Root node:");
     }
@@ -95,8 +106,6 @@ public class BST {
         display(node.left, "left node of " + node.value + " : ");//becouse the details is type of string
         display(node.right, "right node of " + node.value + " : ");
     }
-
-
     public static void main(String[] args) {
         BST tree = new BST();
         int[] arr = {10, 5, 15, 3, 7, 18, 1, -1};
@@ -105,4 +114,44 @@ public class BST {
 
     }
 
+    ///  Traversal techniques
+
+    //preorder traversal
+    public void preOrderTraversal(){
+        preOrder(root);
+    }
+    private void preOrder(Node node){
+        if(node==null){
+            return;
+        }
+        System.out.println(node.value);
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+    //
+    public void inOrderTraversal(){
+        inOrderTraversal(root);
+    }
+    private void inOrderTraversal(Node node){
+        if(node==null){
+            return;
+        }
+        inOrderTraversal(node.left);
+        System.out.println(node.value);
+        inOrderTraversal(node.right);
+    }
+
+    //postorder
+    public void postOrderTraversal(){
+        postOrder(root);
+    }
+    private void postOrder(Node node){
+        if(node==null){
+            return;
+        }
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.value);
+
+    }
 }
