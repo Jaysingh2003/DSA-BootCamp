@@ -24,7 +24,7 @@ public class BST {
 
     /// find the height nof the node
     public int height(Node node) {//height is calclated by >  leaf node to that node height
-        if (node == null) {///suppose if any node has the left child and its right child does not have then -1 is used for the right child
+        if (node == null) {///suppose if any node has the left child and its right child  not  > then -1 is used for the right child
             return -1;
         }
         return node.height;
