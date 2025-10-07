@@ -33,7 +33,6 @@ public class AVL {
         return node.height;
 
     }
-
     /// check if the tree is empty or not
     public void isEmpty() {
         if (root == null) {
@@ -64,7 +63,6 @@ public class AVL {
     public void populatedSortedTree(int[] arr) {
         populatedTree(arr, 0, arr.length - 1);
     }
-
     private void populatedTree(int[] arr, int start, int end) {
         if (start > end) {//it will stop becouse the end  value become -1 at a time  so no element is there to insert
             return;
@@ -79,7 +77,6 @@ public class AVL {
     public void insert(int value) {
         root = insert(root, value);
     }
-
     private Node insert(Node node, int value) {
         if (node == null) {//if node is null then create a new node and return it
             return new Node(value);
@@ -99,7 +96,7 @@ public class AVL {
     //when you recursibly call the fxn it will goes from the bottom to up and the it will pring the node
     private Node rotate(Node node) {/// it will return thr node because it will accept the node of the insertion
         if (height(node.left) - height(node.right) > 1) {//it will check if tree is unbalnaced
-            /// apply four casses of rotation
+            /// apply four cases of rotation
             if (height(node.left.left) - height(node.left.right) > 0) {//left left case
                 return rightRotate(node);
             }
