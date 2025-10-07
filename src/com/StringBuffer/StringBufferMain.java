@@ -1,5 +1,7 @@
 package com.StringBuffer;
+
 import java.util.Random;
+
 import com.StringBuffer.RandomCharecter;
 
 
@@ -23,11 +25,14 @@ public class StringBufferMain {
         s1.replace(0, 3, "Hello");
         System.out.println(s1);
 
+        ///Random Charecter
         Random r = new Random();
-
         System.out.println(RandomCharecter.genrateRandomCharecter(20));
 
-
+        /// remove white space
+        String str = "He   llo Worl  d fwr wrgrger  eth      ethth";
+        System.out.println(str);
+        System.out.println(str.replaceAll("\\s", ""));
 
 
 
