@@ -52,7 +52,7 @@ public class SegmentTree {
         //outside the interval
         if (node.startinterval > qei || node.endinterval < qsi) {
             return 0;
-        }
+        }//node ka start jyada hona chahiye query ke start se and node ka end jyada hona chahiye query ke end se tabhi inside li karega
         if (node.startinterval >= qsi && node.endinterval <= qei) {//node’s range is completely inside ->The entire (queryrenage) [2,3] segment lies within [1,4]
             return node.value;
         }//partyial overlap
@@ -62,20 +62,20 @@ public class SegmentTree {
 
     /// update
     public void update(int index, int val) {
-        this.root.value = update(this.root, index, val);
+        this.root.value = update(this.root, index, val);///root ki value finally update karni h
     }
 
     private int update(Node node, int index, int val) {
         if (index >= node.startinterval && index <= node.endinterval) {
-          if(index== node.startinterval && index==node.endinterval){
-              node.value = val;
-              return node.value;
-          }else{
-              int left = update(node.left, index, val);
-              int right = update(node.right, index, val);
-              node.value = left + right;
-              return node.value;
-          }
+            if (index == node.startinterval && index == node.endinterval) {
+                node.value = val;
+                return node.value;
+            } else {/// in the else condition after the leaf node is updated we will update the upper nodes upto the root
+                int left = update(node.left, index, val);
+                int right = update(node.right, index, val);
+                node.value = left + right;
+                return node.value;
+            }
 
         }
         return node.value;
