@@ -13,7 +13,7 @@ public class Main {
                 System.out.println((char)letter);///prints the character.
                 letter= isr.read();///reads the next one.
             }
-            isr.close();
+           /// isr.close();
             System.out.println();
 
         }catch (IOException e){
