@@ -9,7 +9,7 @@ public class BineryTree {
         Node left;
         Node right;
 
-        public Node(int value) {
+        public Node(int value) {///constructor
             this.value = value;
         }
     }
@@ -27,8 +27,8 @@ public class BineryTree {
     // Recursively insert elements
     public void populate(Scanner scanner, Node node) {
         System.out.print("Do you want to insert the left node of " + node.value + "? (true/false): ");
-        boolean left = scanner.nextBoolean();
-        if (left) {
+        boolean left = scanner.nextBoolean();//write true of false
+        if (left) {//if left is true then
             System.out.print("Enter the value of the left node: ");
             int leftValue = scanner.nextInt();
             node.left = new Node(leftValue);

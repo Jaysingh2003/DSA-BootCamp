@@ -54,7 +54,8 @@ public class BST {
         }
         int mid = (start + end) / 2;
         insert(arr[mid]);
-        populatedTree(arr, start, mid - 1);
+        populatedTree(arr, start, mid - 1);// stop of left Recurse left → populatedTree(arr, 0, -1) means when only one elemt
+                                                // are left the  we have to  go upto the  mid -1 so 0-1 id the -1 ( stat 0, end -1 -> means start> end)
         populatedTree(arr, mid + 1, end);
     }
 
