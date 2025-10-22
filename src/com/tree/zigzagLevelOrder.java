@@ -8,10 +8,9 @@ public class zigzagLevelOrder {
         List<List<Integer>> result = new ArrayList<>();
         if (root == null) return result;
 
-        Deque<TreeNode> dq = new LinkedList<>();
+        Deque<TreeNode> dq = new LinkedList<>();//data can be added or removed from both ends
         dq.offer(root);
         boolean reverse = false;
-
         while (!dq.isEmpty()) {
             int size = dq.size();
             List<Integer> currentLevel = new ArrayList<>(size);
@@ -19,7 +18,7 @@ public class zigzagLevelOrder {
             for (int i = 0; i < size; i++) {
                 if (!reverse) {
                     // left -> right: take from front, add children to back (left then right)
-                    TreeNode node = dq.pollFirst();
+                    TreeNode node = dq.pollFirst();//remove first element and return it
                     currentLevel.add(node.val);
                     if (node.left != null) dq.addLast(node.left);
                     if (node.right != null) dq.addLast(node.right);
