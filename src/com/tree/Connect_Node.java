@@ -24,7 +24,7 @@ public class Connect_Node {
         TreeNode1 leftmost = root;
         while (leftmost.left != null) {
             TreeNode1 current = leftmost;
-            while (current != null) {
+            while (current != null) {/// for loop this condition is used
                 current.left.next = current.right;
                 if (current.next != null) {
                     current.right.next = current.next.left;//it is the bridge between two parents
