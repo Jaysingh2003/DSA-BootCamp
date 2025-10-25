@@ -36,8 +36,8 @@ public class Connect_Node2 {
             Node prev = dummy;        // builds next level's next pointers
             Node current = leftmost;
 
-            while (current != null) {
-                if (current.left != null) {
+            while (current != null) {// iterate over current level
+                if (current.left != null) {// connect left child
                     prev.next = current.left;
                     prev = prev.next;
                 }
