@@ -13,5 +13,11 @@ public class Comparison {
         System.out.println(c.equals(d));//.eual ponly comaper the value
         System.out.println(c==d);//so it will give the false value beacuse it point to 2 different objcets
     }
+ //reverse the String
+    // O(n) and 0(1)space complixty using StringBuilder
+    static String reverseString1 (String str){
+        if (str == null) return null;
+        return new StringBuilder(str).reverse().toString();
+    }
 
 }
