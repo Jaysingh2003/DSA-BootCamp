@@ -29,16 +29,21 @@ public class Climb {
         return dp[n];
     }
     // Space-optimized version
-    static long climb2(int n) {
-        if (n < 0) return 0;
-        if (n == 0) return 1;
-        long prev2 = 1; // dp[0]
-        long prev1 = 1; // dp[1]
+    public int climbStairs(int n) {
+
+        if (n <= 1) {
+            return 1;
+        }
+
+        int prev2 = 1; // ways to reach step 0
+        int prev1 = 1; // ways to reach step 1
+
         for (int i = 2; i <= n; i++) {
-            long curr = prev1 + prev2;
+            int curr = prev1 + prev2;
             prev2 = prev1;
             prev1 = curr;
         }
+
         return prev1;
     }
 
