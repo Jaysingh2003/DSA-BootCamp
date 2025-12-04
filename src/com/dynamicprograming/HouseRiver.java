@@ -2,7 +2,7 @@ package com.dynamicprograming;
 
 
 //https://leetcode.com/problems/house-robber/
-public class Robbery {
+public class HouseRiver {
     public int rob(int[] nums) {
         int n = nums.length;
 
