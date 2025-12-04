@@ -23,4 +23,19 @@ public class Robbery {
 
         return dp[n - 1];                         // best till last house
     }
+
+    public  int rob1(int[] nums) {
+        int n = nums.length;
+        int prev = nums[0];//the pick is like the current element
+        int prev2 = 0;
+        for (int i = 1; i < n; i++) {
+            int pick = nums[i];
+            if (i > 1) pick += prev2;
+            int notPick = 0 + prev;
+            int curr = Math.max(pick, notPick);
+            prev2 = prev;
+            prev = curr;
+        }
+        return prev;
+    }
 }
