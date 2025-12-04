@@ -60,7 +60,7 @@ public class Adjacent_Subsequence_sum {
     // Space Optimization
     public int maximumNonAdjacentSum2(int[] nums) {
         int n = nums.length;
-        int prev = nums[0];
+        int prev = nums[0];//the pick is like the xurrent element
         int prev2 = 0;
         for (int i = 1; i < n; i++) {
             int pick = nums[i];
