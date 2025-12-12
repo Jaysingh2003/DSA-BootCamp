@@ -2,6 +2,7 @@ package com.dynamicprograming;
 
 import java.util.Arrays;
 
+//such kind pf proble is pick and not pick type of problems..
 //You are given an array/list of N integers.
 //You must return the maximum possible sum of a subsequence
 // such that no two selected elements are adjacent in the array.
