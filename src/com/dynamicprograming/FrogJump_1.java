@@ -11,12 +11,13 @@ public class FrogJump_1 {
     public boolean canCross(int[] stones) {
         int n = stones.length;
 
-        // First jump must be 1, so if second stone is not at 1, impossible
+        // First jump must be 1, so if second stone is not at 1 means ki  leth of stone will we one unit so that it can jump, impossible
         if (n > 1 && stones[1] != 1) return false;
 
         // Map: stone position -> set of jump sizes that can reach this stone
         Map<Integer, Set<Integer>> map = new HashMap<>();
 
+        // each stone position has an empty set ready to hold jump sizes.
         for (int stone : stones) {
             map.put(stone, new HashSet<>());
         }
