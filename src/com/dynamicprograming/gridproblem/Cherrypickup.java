@@ -1,4 +1,4 @@
-package com.dynamicprograming;
+package com.dynamicprograming.gridproblem;
 
 import java.util.Arrays;
 
