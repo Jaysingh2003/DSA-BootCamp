@@ -1,5 +1,7 @@
 package com.dynamicprograming.subsequence;
 import java.util.HashSet;
+
+///  length of the longest substring without repeating characters.
 public class LogestSubstring_norepeating {
     class Solution {
         public int lengthOfLongestSubstring(String s) {
