@@ -7,12 +7,12 @@ public class Maxsum_k_element {
        int n = arr.length;
        int maxSum = Integer.MIN_VALUE;
        while(j<n){
-           sum+=arr[j];
+           sum+=arr[j];///calculating sum
               if(j-i+1<k){
                 j++;
               }else if(j-i+1==k){
                 maxSum = Math.max(maxSum,sum);
-                sum-=arr[i];
+                sum-=arr[i];///slide
                 i++;
                 j++;
               }
