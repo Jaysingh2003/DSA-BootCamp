@@ -1,5 +1,5 @@
 package com.TWOPOINTER;
-
+/// in thuis question we have to find the maximum element in every subarray of size k
 public class Max_element {
 
     public static int[] findmaxelement(int[] arr, int k) {

@@ -19,4 +19,13 @@ public class LogestSubstring_norepeating {
             return maxLen;
         }
     }
+
+    public static void main(String[] args) {
+        LogestSubstring_norepeating outer = new LogestSubstring_norepeating();
+        Solution solution = outer.new Solution();
+        String s = "abcabcbb";
+        int result = solution.lengthOfLongestSubstring(s);
+        System.out.println("Length of longest substring without repeating characters: " + result);
+    }
+
 }

@@ -1,8 +1,6 @@
 package com.TWOPOINTER.variablesize;
 //The questionn isthat we have to find the longest subsequence length whose sum is equal to k
 
-
-
 /// this is valid only for positive numbers only
 public class Longest_subsequence {
     public static int LogestSubsequence(int[] arr, int k) {
@@ -12,7 +10,7 @@ public class Longest_subsequence {
         int n = arr.length;
 
         while (j < n) {
-            sum += arr[j];
+            sum += arr[j];///this is the condition part  for the calculation
             if (sum < k) {
                 j++;
             } else if (sum == k) {
@@ -20,12 +18,10 @@ public class Longest_subsequence {
                 j++;
             } else {
                 while (sum > k && i <= j) {
-                    sum -= arr[i];
-                    i++;
-
+                    sum -= arr[i];  ///if the sum is greater than k we will remove the elements from the starting
+                    i++;              /// until the sum is less than or equal to k
                 }
                 j++;
-
             }
         }
         return maxLength;
