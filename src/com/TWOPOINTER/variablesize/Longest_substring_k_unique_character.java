@@ -18,7 +18,8 @@ public class Longest_substring_k_unique_character {
             map.put((int) ch, map.getOrDefault((int) ch, 0) + 1);// Add character to the map
 
             // Shrink window if distinct characters exceed k
-            while (map.size() > k) {/// it will give the size of the map
+            //map.size() gives the count of no of distinct keys in the map
+            while (map.size() > k) {/// it means that we have more than k distinct characters
                 char leftChar = s.charAt(i);
                 map.put((int) leftChar, map.get((int) leftChar) - 1);
 
