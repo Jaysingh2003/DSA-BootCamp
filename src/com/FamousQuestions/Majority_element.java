@@ -1,6 +1,7 @@
 package com.FamousQuestions;
 
 /// https://leetcode.com/problems/majority-element/description/
+/// Boyer–Moore Voting Algorithm
 public class Majority_element {
     public int majorityElement(int[] nums) {
         int count = 0;
