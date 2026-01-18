@@ -1,7 +1,8 @@
 package com.TWOPOINTER.variablesize;
 
 import java.util.HashMap;
-
+/// https://leetcode.com/problems/longest-substring-without-repeating-characters/
+///wiuthout repeating characters]
 public class lengthOfLongestSubstring {
     public int lengthflongestsubstring(String s) {
         HashMap<Character, Integer> map = new HashMap<>();

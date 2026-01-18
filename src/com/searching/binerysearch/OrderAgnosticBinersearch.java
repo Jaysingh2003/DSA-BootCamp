@@ -10,8 +10,8 @@ public class OrderAgnosticBinersearch {
     }
 
     static  int orderagnosticbinersearch(int[] arr , int target){
-        int start=0;
-        int end=arr.length-1;
+        int start = 0;
+        int end = arr.length - 1;
 
         //find whether the array is ascending or descending order
         boolean isAsc = arr[start]< arr[end];

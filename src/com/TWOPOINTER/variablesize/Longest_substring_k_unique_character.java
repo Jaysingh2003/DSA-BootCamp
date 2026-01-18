@@ -2,7 +2,8 @@ package com.TWOPOINTER.variablesize;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/// https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/
+/// longest substring with at most k unique characters
 public class Longest_substring_k_unique_character {
 
     public static int lengthOfLongestSubstringKDistinct(String s, int k) {
