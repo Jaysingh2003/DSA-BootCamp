@@ -34,7 +34,9 @@ public class First_negative_m_number {
                 }
 
                 // 4️⃣ remove element going out of window
-                if (!dq.isEmpty() && dq.peekFirst() == i) {
+                //  dq.peekFirst() it will return index of first negative number in the dq(becouse we are storing index in dq)
+                //it means ki jo dq me hum store ker rakhe hai wo index i ke barabar hai to hum usko dq se remove ker denge
+                if (!dq.isEmpty() && dq.peekFirst() == i) {// if index matches it manes the
                     dq.pollFirst();
                 }
 
