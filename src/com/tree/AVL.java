@@ -77,6 +77,7 @@ public class AVL {
     public void insert(int value) {
         root = insert(root, value);
     }
+
     private Node insert(Node node, int value) {
         if (node == null) {//if node is null then create a new node and return it
             return new Node(value);
@@ -90,7 +91,7 @@ public class AVL {
         //while you are traversing the tree the height of the tree is changing
         /// 1 is added here because the height  is calculated upto the root one more edge is extra added
         node.height = Math.max(height(node.left), height(node.right)) + 1;
-        return rotate(node);//rotate method take the node rotate it and return the node
+        return rotate(node);//rotate method take the node rotate it and return the node because the return type is Node
     }
 
     //when you recursibly call the fxn it will goes from the bottom to up and the it will pring the node
@@ -128,7 +129,7 @@ public class AVL {
         p.height = Math.max(height(p.left), height(p.right) + 1);
         c.height = Math.max(height(c.left), height(c.right) + 1);
 
-        return c;
+        return c;///it will retun the node c;
     }
 
     public Node leftRotate(Node c) {
@@ -153,7 +154,7 @@ public class AVL {
              tree.insert(i);
         }
         System.out.println(tree.isBalanced());
-        System.out.println(tree.height());
+        System.out.println(tree.height());// it should be log n in avl tree but in bst it will be n
     }
 
 }

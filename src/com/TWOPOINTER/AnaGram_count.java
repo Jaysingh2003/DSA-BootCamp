@@ -1,7 +1,7 @@
 package com.TWOPOINTER;
 
 import java.util.Arrays;
-
+//anagram count in a string means ki hume ye count krna hai ki given pattern ke kitne anagram text me present hai
 public class AnaGram_count {
 
     public static int countAnagrams(String text, String pattern) {

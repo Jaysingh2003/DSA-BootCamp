@@ -1,5 +1,6 @@
 package com.tree;
 
+
 public class BST {
     public class Node {
         private int value;
@@ -22,8 +23,8 @@ public class BST {
 
     }
 
-    /// find the height nof the node
-    public int height(Node node) {//height is calclated by >  leaf node to that node height
+    /// find the height -> it does not calculate the height of the tree it only return the alredy calcuted height of the node like getter for displaying the height
+    public int height(Node node) {//height is calclated by >  leaf node to that node height or be can sey (how maney edges between them)
         if (node == null) {///suppose if any node has the left child and its right child  not  > then -1 is used for the right child
             return -1;
         }
@@ -44,7 +45,7 @@ public class BST {
             this.insert(arr[i]);
         }
     }
-    /// populate for the sorted array-> 1,2,3,4,5,6,..
+    /// populate for the sorted array-> 1,2,3,4,5,6,.. if not do that then the tree will be skewed tree
     public void populatedSortedTree(int[] arr) {
         populatedTree(arr, 0, arr.length - 1);
     }
@@ -63,9 +64,9 @@ public class BST {
     public void insert(int value) {
         root = insert(root, value);
     }
-
+    /// 1-> Node root = null -> 2 - insert(10) -> root = insert(null, 10) -> return new Node(10) -> root = Node(10)
     private Node insert(Node node, int value) {
-        if (node == null) {//if node is null then create a new node and return it
+        if (node == null) {//if node is null then create a new node and return it like a leaf node
             return new Node(value);
         }
         //node.left is equal to what ever you retun from  here  -> insert(node.left, value)
@@ -117,7 +118,7 @@ public class BST {
 
     ///  Traversal techniques
 
-    //preorder traversal
+    ///preorder traversal
     public void preOrderTraversal(){
         preOrder(root);
     }
@@ -129,8 +130,10 @@ public class BST {
         preOrder(node.left);
         preOrder(node.right);
     }
-    //
+    /// inOrderTraversal
+    /// it will give the sorted order of the element in the BST
     public void inOrderTraversal(){
+
         inOrderTraversal(root);
     }
     private void inOrderTraversal(Node node){
@@ -142,7 +145,7 @@ public class BST {
         inOrderTraversal(node.right);
     }
 
-    //postorder
+    ///postorder
     public void postOrderTraversal(){
         postOrder(root);
     }

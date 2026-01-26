@@ -24,7 +24,7 @@ import java.util.Queue;
             while (!queue.isEmpty()) {
                 int levelSize = queue.size();
                 for (int i = 0; i < levelSize; i++) {
-                    TreeNode current = queue.poll();
+                    TreeNode current = queue.poll();//
                     /// as the last node in the level we add its value to the result
                     if (i == levelSize - 1) {
                         result.add((double) current.val);
