@@ -3,7 +3,7 @@ package com.TWOPOINTER.variablesize;
 
 //vvi
 //If a subarray sum becomes negative, it is better to discard it, because it cannot contribute to a maximum sum in the future.
-public class Kadense_algorithems {
+public class    Kadense_algorithems {
     public static int maxsum(int[] arr){
         int max=Integer.MIN_VALUE;
         int currentsum=0;
