@@ -15,7 +15,7 @@ public class Smallest_missing_number {
                 arr[i] = n + 1;
             }
         }
-
+       /// val is 1 to n and index is 0 to n-1 so for( val=1 i index is 0) and  for val=n index is n-1)
         // Step 2 mark index v-1 as negative if v is present in the array -ve mark se hame extra space nhi lgana pdta
         for (int i = 0; i < n; i++) {
             int val = Math.abs(arr[i]);

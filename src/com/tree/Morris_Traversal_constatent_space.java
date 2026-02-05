@@ -2,6 +2,7 @@ package com.tree;
 
 import java.util.ArrayList;
 import java.util.List;
+
 //Morris traversal performs inorder traversal by creating temporary threads using inorder predecessors,
 // allowing traversal in O(1) extra space without recursion or a stack.
 public class Morris_Traversal_constatent_space {
