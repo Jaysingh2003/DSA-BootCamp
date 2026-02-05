@@ -4,6 +4,7 @@ import com.oops.acces.A;
 
 import java.util.Arrays;
 
+//anagram means the string which have same character but in different order
 public class Anagram {
     public static void main(String[] args) {
         String s = "hello";

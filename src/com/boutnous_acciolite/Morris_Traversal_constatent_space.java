@@ -23,7 +23,8 @@ public class Morris_Traversal_constatent_space {
             this.right = right;
         }
     }
-
+    //Morris traversal performs inorder traversal by creating temporary threads using inorder predecessors,
+// allowing traversal in O(1) extra space without recursion or a stack.
     public List<Integer> morristreaversal(TreeNode node) {
         List<Integer> list = new ArrayList<>();
         TreeNode curr = node;
