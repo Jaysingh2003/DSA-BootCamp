@@ -11,9 +11,8 @@ public class Sum_Target {
             Arrays.fill(dp[i], -1);
         }
         return helper(n - 1, target, arr);
-
-
     }
+
     private  boolean helper(int n, int target, int[] arr) {
         if(target==0) return true;//if target is 0 we found the subset
         if(n==0) return arr[0]==target;//when we reach the first elemnt then we havon only one option
