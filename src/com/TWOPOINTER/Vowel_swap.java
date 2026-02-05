@@ -9,7 +9,6 @@ public  class Vowel_swap {
         }
 
     }
-
     public static String swapVowels(String str) {
         char[] arr = str.toCharArray();
         int n = arr.length;
