@@ -16,14 +16,13 @@ public class Delete_from_last {
         if (head == null) {
             return null;
         }
-
         Node dummy = new Node(0); // create a dummy node to handle edge cases like deleting the head node
         dummy.next = head;
 
         Node fast = dummy;
         Node slow = dummy;
 
-        /// move fast pointer n steps ahead and on
+        /// move fast pointer n steps ahead and just like the racing game so that they get  they have travle equal distannce
         /// note: this loop first moves n+1 steps, after that the below while loop starts
         for (int i = 0; i <= n; i++) {
             fast = fast.next;
