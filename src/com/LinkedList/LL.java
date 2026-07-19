@@ -8,6 +8,7 @@ public class LL {
     private int size;
 
     public LL() {//constructor
+
         this.size = 0;
     }
 
